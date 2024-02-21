@@ -19,10 +19,19 @@ public class Person {
 
     public void look(Visible thing)
     {
-        System.out.println(name+" "+thing.look_at_this());
 
-        if(thing instanceof Lunite)can_see=true;
+
+        if(thing instanceof Lunite) {
+            can_see = true;
+            System.out.println(name+" может видеть в темноте");
+        }
+        if(can_see==true)System.out.println(name+" "+thing.look_at_this());
+        else System.out.println("Не может видеть в темноте");
     }
 
+    public void doSomeProcess(String Process)
+    {
+        System.out.println(name+" "+Process);
+    }
 
 }

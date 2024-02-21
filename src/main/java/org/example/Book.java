@@ -5,8 +5,10 @@ import org.example.Actions.Takeable;
 public class Book extends Element implements Takeable {
     private String content;
 
-    public Book(String content) {
+    public Book(String content,String place)
+    {
         this.content = content;
+        this.place=place;
     }
 
 
@@ -18,6 +20,11 @@ public class Book extends Element implements Takeable {
 
     @Override
     public String look_at_this() {
-        return null;
+        return "глядел на книгу";
+    }
+
+    @Override
+    public String toString() {
+        return "книга";
     }
 }

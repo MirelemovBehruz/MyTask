@@ -4,5 +4,5 @@ import org.example.Actions.Visible;
 
 public abstract class Element implements Visible {
 
-
+    protected String place;
 }

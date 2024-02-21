@@ -4,12 +4,17 @@ public class Main {
     public static void main(String[] args) {
         Person Znayka =new Person("Знайка",false);
         Lunite lunite = new Lunite();
-        Book book = new Book("Some content of the book...");
         Room room=new Room();
+        Furniture table=new Furniture("стол",room.toString());
+        Furniture chair=new Furniture("стул",room.toString());
+        Furniture shelf=new Furniture("полка",room.toString());
+        Book book = new Book("Some content of the book...",shelf.toString());
 
-        Furniture table=new Furniture("стол");
-        Furniture chair=new Furniture("стул");
-        Furniture shelf=new Furniture("полка");
+
+
+
+
+
 
         Znayka.take(lunite);
 
@@ -20,8 +25,11 @@ public class Main {
         Znayka.look(chair);
         Znayka.look(shelf);
         Znayka.take(book);
+        Znayka.doSomeProcess("раскрыл "+book.toString());
+        Znayka.doSomeProcess("положил "+lunite.toString()+" на "+book.toString());
         lunite.lightUp("Листок");
 
+        Znayka.doSomeProcess("понял, что "+lunite.toString()+" выделял какую-то лучистую энергию");
 
 
     }
