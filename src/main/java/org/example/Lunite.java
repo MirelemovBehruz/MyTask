@@ -7,6 +7,7 @@ public class Lunite extends Element implements Takeable {
 
 
 
+
     public void lightUp(String something)
     {
         System.out.println("Лунит осветил "+something);
