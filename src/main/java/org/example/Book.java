@@ -18,10 +18,7 @@ public class Book extends Element implements Takeable {
         return "взял книгу";
     }
 
-    @Override
-    public String look_at_this() {
-        return "глядел на книгу";
-    }
+
 
     @Override
     public String toString() {
