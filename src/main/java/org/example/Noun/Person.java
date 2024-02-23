@@ -1,9 +1,11 @@
-package org.example;
+package org.example.Noun;
 
 import org.example.Actions.Takeable;
 import org.example.Actions.Visible;
+import org.example.Noun.Alive;
+import org.example.Noun.Lunite;
 
-public class Person extends Alive{
+public class Person extends Alive {
 
 
     public Person(String name, boolean can_see) {
@@ -29,6 +31,21 @@ public class Person extends Alive{
         else System.out.println("Не может видеть в темноте");
     }
 
+    @Override
+    public int hashCode(){
+
+        return super.hashCode()+getName().hashCode()*11;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj.hashCode() == this.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return this.getName();
+    }
 
 
 }
