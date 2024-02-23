@@ -5,6 +5,8 @@ import org.example.Actions.Visible;
 import org.example.Noun.Alive;
 import org.example.Noun.Lunite;
 
+import java.util.Objects;
+
 public class Person extends Alive {
 
 
@@ -39,7 +41,10 @@ public class Person extends Alive {
 
     @Override
     public boolean equals(Object obj) {
-        return obj.hashCode() == this.hashCode();
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Person person=(Person) obj;
+        return Objects.equals(this.getName(), person.getName());
     }
 
     @Override
