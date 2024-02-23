@@ -1,7 +1,8 @@
-package org.example;
+package org.example.Noun;
 
 import org.example.Actions.Takeable;
-import org.example.Actions.Visible;
+import org.example.Noun.Element;
+
 
 public class Lunite extends Element implements Takeable {
 
@@ -31,5 +32,20 @@ public class Lunite extends Element implements Takeable {
     @Override
     public String toString() {
         return "Лунит";
+    }
+
+    @Override
+    public int hashCode(){
+
+        return super.hashCode()*23;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!super.equals(obj)) return false;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        return true;
+
     }
 }

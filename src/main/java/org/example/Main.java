@@ -1,22 +1,18 @@
 package org.example;
 
 import org.example.Actions.Doing;
+import org.example.Noun.*;
 
 public class Main {
     public static void main(String[] args) {
         Person Znayka =new Person("Знайка",false);
 
         Lunite lunite = new Lunite();
-        Room room=new Room();
-        Furniture table=new Furniture("стол",room.toString());
-        Furniture chair=new Furniture("стул",room.toString());
-        Furniture shelf=new Furniture("полка",room.toString());
-        Book book = new Book("слова",shelf.toString());
-
-
-
-
-
+        Room room=new Room(",обычная комната");
+        Furniture table=new Furniture("стол",room);
+        Furniture chair=new Furniture("стул",room);
+        Furniture shelf=new Furniture("полка",room);
+        Book book = new Book("слова",shelf);
 
 
         Znayka.take(lunite);

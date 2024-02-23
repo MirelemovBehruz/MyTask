@@ -1,9 +1,13 @@
-package org.example;
+package org.example.Noun;
 
 import org.example.Actions.Takeable;
 import org.example.Actions.Visible;
+import org.example.Noun.Alive;
+import org.example.Noun.Lunite;
 
-public class Person extends Alive{
+import java.util.Objects;
+
+public class Person extends Alive {
 
 
     public Person(String name, boolean can_see) {
@@ -29,6 +33,24 @@ public class Person extends Alive{
         else System.out.println("Не может видеть в темноте");
     }
 
+    @Override
+    public int hashCode(){
+
+        return super.hashCode()+getName().hashCode()*11;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Person person=(Person) obj;
+        return Objects.equals(this.getName(), person.getName());
+    }
+
+    @Override
+    public String toString() {
+        return this.getName();
+    }
 
 
 }
